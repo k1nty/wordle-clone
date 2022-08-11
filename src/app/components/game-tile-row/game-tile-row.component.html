@@ -1,0 +1,32 @@
+<div class="row">
+    <app-game-tile 
+        [letter]="letters[0]"  
+        [letterMatch]="getDataFromService(0)" 
+        style="animation-delay: 0ms;" 
+        [ngClass]="{'flip': flipTile(letters[0])}"
+    ></app-game-tile>
+    <app-game-tile 
+        [letter]="letters[1]"  
+        [letterMatch]="getDataFromService(1)" 
+        style="animation-delay: 100ms;" 
+        [ngClass]="{'flip': flipTile(letters[1])}"
+    ></app-game-tile>
+    <app-game-tile 
+        [letter]="letters[2]"  
+        [letterMatch]="getDataFromService(2)" 
+        style="animation-delay: 200ms;" 
+        [ngClass]="{'flip': flipTile(letters[2])}"
+    ></app-game-tile>
+    <app-game-tile 
+        [letter]="letters[3]"  
+        [letterMatch]="getDataFromService(3)" 
+        style="animation-delay: 300ms;" 
+        [ngClass]="{'flip': flipTile(letters[3])}"
+    ></app-game-tile>
+    <app-game-tile 
+        [letter]="letters[4]"  
+        [letterMatch]="getDataFromService(4)" 
+        style="animation-delay: 400ms;" 
+        [ngClass]="{'flip': flipTile(letters[4])}"
+    ></app-game-tile>
+</div>

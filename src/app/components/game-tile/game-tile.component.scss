@@ -1,0 +1,32 @@
+.tile{
+    height: 46px;
+    width: 46px;
+    border: 2px solid rgb(211, 214, 218);
+    margin: 2px;
+    position: relative;  
+    display: inline-block;
+    padding-top: 9px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.letter{
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.letter-match {
+    background-color: green;
+}
+
+.letter-exist {
+    background-color: yellow;
+}
+
+.letter-dne {
+    background-color: grey;
+}

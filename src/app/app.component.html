@@ -1,0 +1,49 @@
+<header class="title-header">Kees' Wordle</header>
+<div class="word-popup">
+    <div [ngClass]="{'final-word-popup': finalGuess()}"> {{ randomWord }}</div>
+    <div [ngClass]="{'golden-word-popup': congratsYouWon()}"> CONGRATS!! </div>
+</div>
+<div id="board">
+    <div id="game-board" style="width: 272px; height: 324px;">
+        <app-game-tile-row 
+            [letters]="rowLetters[0]" 
+            [ngClass]="{'shake': shakeRow(rowLetters[0])}" 
+            [randomWord]="randomWord"
+            [rowFilled]="rowFilled(0)"
+        ></app-game-tile-row>
+        <app-game-tile-row 
+            [letters]="rowLetters[1]" 
+            [ngClass]="{'shake': shakeRow(rowLetters[1])}" 
+            [randomWord]="randomWord"
+            [rowFilled]="rowFilled(1)"
+        ></app-game-tile-row>
+        <app-game-tile-row 
+            [letters]="rowLetters[2]" 
+            [ngClass]="{'shake': shakeRow(rowLetters[2])}" 
+            [randomWord]="randomWord"
+            [rowFilled]="rowFilled(2)"
+        ></app-game-tile-row>
+        <app-game-tile-row 
+            [letters]="rowLetters[3]" 
+            [ngClass]="{'shake': shakeRow(rowLetters[3])}" 
+            [randomWord]="randomWord"
+            [rowFilled]="rowFilled(3)"
+        ></app-game-tile-row>
+        <app-game-tile-row 
+            [letters]="rowLetters[4]" 
+            [ngClass]="{'shake': shakeRow(rowLetters[4])}" 
+            [randomWord]="randomWord"
+            [rowFilled]="rowFilled(4)"
+        ></app-game-tile-row>
+        <app-game-tile-row 
+            [letters]="rowLetters[5]" 
+            [ngClass]="{'shake': shakeRow(rowLetters[5])}" 
+            [randomWord]="randomWord"
+            [rowFilled]="rowFilled(5)"
+        ></app-game-tile-row>
+    </div>
+    <app-game-keyboard 
+        (keyboardEmitter)="handleKeyboardInput($event)"
+    ></app-game-keyboard>
+</div>
+
